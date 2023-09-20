@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<style>
+
+    body {
+        background-color: #8a2be2;
+        color: #ffffff;
+        font-family: sans-serif, Arial, Helvetica;
+    }
+
+    .container {
+        background-color: #9666c4;
+        width: 500px;
+        border-color: #ffffff;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 15px 15px 15px 15px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    h2 {
+        border-color: #ffffff;
+        background-color: #8a2be2;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        margin-left: 295px;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        border-color: #ffffff;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 5px;
+        height: 20px;
+    }
+    
+    select.form-control {
+        padding: 0px;
+        height: 30px;
+        width: 100%;
+    }
+
+    .d-block {
+        display: block;
+        margin-bottom: -15px;
+    }
+
+    select {
+        border-color: #ffffff;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    .btn {
+        border-color: #ffffff;
+        color: #000000;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 5px;
+        width: 100px;
+        font-size: 15px;
+    }
+    
+    .bg-orange {
+        background-color: #e7b049;
+    }
+    .bg-green {
+        background-color: #5fa75f;
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <h2>الرجاء تعبة النموذج: </h2>
+    <form method="get" action="" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label class="d-block" for="name">الإسم: </label>
+            <br>
+            <input
+            name="name"
+            id="name"
+            type="text"
+            placeholder="أدخل إسمك بالكامل"
+            maxlength="100"
+            class="form-control"
+
+            >
+        </div>
+
+        <div class="form-group">
+            <label class="d-block" for="email">الإيميل: </label>
+            <br>
+            <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="أكتب إيميلك"
+            class="form-control"
+
+            >
+        </div>
+
+        <div class="form-group">
+            <label class="d-block" for="tel">الهاتف: </label>
+            <br>
+            <input
+            id="tel"
+            type="tel"
+            name="tel"
+            placeholder="أكتب رقم الهاتف"
+            class="form-control"
+
+            >
+        </div>
+
+        <div class="form-group">
+            <label class="d-block">الجنس: </label>
+            <br>
+            <label for="male">ذكر</label>
+            <input
+            id="male"
+            type="radio"
+            name="gender"
+            value="male"
+            >
+
+            <label for="female">أنثى</label>
+            <input 
+            id="female"
+            type="radio"
+            name="gender"
+            value="female"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <div>ماهو المنتج الذي قمت بشراءه؟</div>
+
+        <div>
+            <input
+            id="tea1"
+            type="checkbox"
+            name="product"
+            >
+            <label for="tea1">شاي1</label>
+        </div>
+
+        <div>
+            <input
+            id="tea2"
+            type="checkbox"
+            name="product"
+            >
+            <label for="tea2">شاي2</label>
+        </div>
+
+        <div>
+            <input
+            id="tea3"
+            type="checkbox"
+            name="product"
+            >
+            <label for="tea3">شاي3</label>
+        </div>
+    </div>
+
+        <div class="form-group">
+            <label class="d-block" for="date">ماهو تاريخ شرائك للمنتج؟</label>
+            <br>
+            <input
+            id="date"
+            type="date"
+            class="form-control"
+            >
+
+        </div>
+
+        <div class="form-group">
+            <label class="d-block" for="image">صور المنتج: </label>
+            <br>
+            <input 
+            type="file" id="image" multiple
+            >
+            
+        </div>
+
+        <div class="form-group">
+            <label class="d-block" for="refer">أين سمعت عنا: </label>
+            <br>
+            <select name="refer" id="refer" required
+            class="form-control"
+            >
+                
+                <option value="" selected>الرجاء الإختيار من القائمة .. </option>
+                <option value="friend">من صديق</option>
+                <option value="google">قوقل</option>
+                <option value="x">اكس</option>
+                <option value="instgram">إنستقرام</option>
+                <option value="snapchat">سناب شات</option>
+                <option value="tiktok">تيك توك</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <button class="btn bg-green" type="submit">إرسال</button>
+            <button class="btn bg-orange" type="reset" value="clear">مسح</button>
+            
+
+        </div>
+
+    </form>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
